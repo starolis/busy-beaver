@@ -21,6 +21,7 @@ lib/
 lib64/
 parts/
 sdist/
+site/
 var/
 *.egg-info/
 .installed.cfg
@@ -45,3 +46,10 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Helpers
+stitch_files.py
+stitched_codebase.txt
+
+# Web
+
