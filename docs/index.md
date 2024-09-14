@@ -34,8 +34,9 @@ Ready to explore the Busy Beaver problem? Here's how to get started:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/busy-beaver.git
+   git clone https://github.com/starolis/busy-beaver.git
    cd busy-beaver
+   ```
 
 2. **Set Up the Environment**
 
