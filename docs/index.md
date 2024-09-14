@@ -69,11 +69,7 @@ After running simulations, you'll receive detailed reports highlighting:
 
 Explore these results to gain insights into the computational power and efficiency of different Turing machine configurations.
 
-## 🤝 Contributing
-
-Contributions are welcome! Whether it's bug fixes, new features, or improving documentation, your help is invaluable.
-
-##📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
