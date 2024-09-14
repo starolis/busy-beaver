@@ -1,5 +1,6 @@
 # busy_beaver/turing_machine.py
 
+
 class TuringMachine:
     def __init__(self, transition_function, start_state, halt_states, max_steps=10000):
         self.transition_function = transition_function

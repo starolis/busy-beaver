@@ -3,6 +3,7 @@
 import unittest
 from busy_beaver.simulation import simulate_machine
 
+
 class TestSimulation(unittest.TestCase):
     def test_simulate_halt(self):
         transition_dict = {
@@ -31,5 +32,6 @@ class TestSimulation(unittest.TestCase):
         result = simulate_machine(transition_dict, max_steps=5)
         self.assertIsNone(result)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

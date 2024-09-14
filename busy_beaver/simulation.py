@@ -11,6 +11,7 @@ halt_state = "H"
 symbols = [0, 1]
 directions = ["L", "R"]
 
+
 def simulate_machine(
     transition_function, start_state="A", halt_states=[halt_state], max_steps=100
 ):
@@ -25,6 +26,7 @@ def simulate_machine(
         return (ones, steps, transition_function)
     else:
         return None  # Indicates non-halting machine
+
 
 def worker_simulate(tf):
     # Build the transition dictionary
@@ -41,6 +43,7 @@ def worker_simulate(tf):
         max_steps=10000,
     )
     return result  # Either (ones, steps, transition_dict) or None
+
 
 def main():
     # Possible next states include all states plus the halt state
