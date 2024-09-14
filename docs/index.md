@@ -80,5 +80,4 @@ Have questions or feedback? Reach out to [matt@starol.is](mailto:matt@starol.is)
 
 ## 🎓 Acknowledgments
 
-- Inspired by the fascinating concepts in Computation Theory.
-- Powered by [MkDocs](https://www.mkdocs.org/) for seamless documentation.
+- Inspired by the fascinating concepts in Computation Theory and those who have pushed the field forward. 🙏

@@ -12,6 +12,10 @@ setup(
     packages=find_packages(),
     install_requires=[
         # Core Dependencies
+<<<<<<< HEAD
+=======
+        "multiprocessing",
+>>>>>>> 2bb4408107392638321447b0fbca6f59d9bf278b
         "functools",
         # Development Dependencies
         "flake8==6.0.0",
