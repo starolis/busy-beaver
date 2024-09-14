@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/starolis/busy-beaver/python-app.yml?branch=main)
 ![Python Version](https://img.shields.io/badge/python-3.8%2C%203.9%2C%203.10-blue)
 
-Welcome to the **Busy Beaver Turing Machine Simulator**! 🎉
+Welcome to the **Busy Beaver Turing Machine Simulator**! 🦫
 
 ## 🧠 What is a Busy Beaver?
 
