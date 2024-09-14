@@ -6,7 +6,7 @@
 
 Welcome to the **Busy Beaver Turing Machine Simulator**! 🎉
 
-## 🧠 What is a Busy Beaver?
+## 🧠 What is a Busy Beaver? Does anyone know?
 
 The **Busy Beaver** problem explores the limits of computation by seeking the Turing machine with the maximum number of `1`s printed on the tape before halting, given a fixed number of states and symbols. It's a fascinating journey into the boundaries of what machines can compute.
 
