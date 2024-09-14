@@ -1,0 +1,14 @@
+site_name: Busy Beaver Turing Machine Simulator
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  #- Usage: usage.md
+  #- Contributing: ../CONTRIBUTING.md
+
+repo_url: https://github.com/starolis/busy-beaver
+repo_name: Busy Beaver
+
+docs_dir: docs
