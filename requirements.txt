@@ -1,6 +1,4 @@
 # Core Dependencies
-itertools
-multiprocessing
 functools
 
 # Development Dependencies
