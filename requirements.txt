@@ -1,5 +1,4 @@
 # Core Dependencies
-functools
 
 # Development Dependencies
 flake8==6.0.0

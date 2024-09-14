@@ -12,7 +12,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         # Core Dependencies
-        "functools",
         # Development Dependencies
         "flake8==6.0.0",
         "black==23.1.0",
