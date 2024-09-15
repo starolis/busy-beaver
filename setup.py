@@ -12,11 +12,15 @@ setup(
     packages=find_packages(),
     install_requires=[
         # Core Dependencies
+        "fastapi==0.68.0"
+        "uvicorn==0.15.0"
+        "websockets==10.0"
         # Development Dependencies
         "flake8==6.0.0",
         "black==23.1.0",
         "pre-commit==2.20.0",
         "pytest==7.2.0",
+        "replit==3.2.5",
     ],
     entry_points={
         "console_scripts": [

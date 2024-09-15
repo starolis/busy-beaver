@@ -1,4 +1,8 @@
 # Core Dependencies
+fastapi==0.68.0
+uvicorn==0.15.0
+websockets==10.0
+replit==3.2.5
 
 # Development Dependencies
 flake8==6.0.0
