@@ -6,24 +6,32 @@ from replit import db
 
 app = FastAPI()
 
+
 class SimulationConfig(BaseModel):
     num_states: int
     max_steps: int
 
+
 def store_results(results):
     db["simulation_results"] = results
+
 
 def get_stored_results():
     return db.get("simulation_results")
 
+
 @app.post("/simulate")
-async def start_simulation(config: SimulationConfig, background_tasks: BackgroundTasks):
-    background_tasks.add_task(run_simulation_task, config.num_states, config.max_steps)
+async def start_simulation(config: SimulationConfig,
+                           background_tasks: BackgroundTasks):
+    background_tasks.add_task(run_simulation_task, config.num_states,
+                              config.max_steps)
     return {"message": "Simulation started"}
+
 
 async def run_simulation_task(num_states: int, max_steps: int):
     results = await run_simulation(num_states, max_steps)
     store_results(results)
+
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
@@ -36,6 +44,7 @@ async def websocket_endpoint(websocket: WebSocket):
     finally:
         await websocket.close()
 
+
 @app.get("/results")
 async def get_results():
     results = get_stored_results()
@@ -43,6 +52,7 @@ async def get_results():
         return results
     else:
         return {"message": "Results not available yet"}
+
 
 if __name__ == "__main__":
     import uvicorn

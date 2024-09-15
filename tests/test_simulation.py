@@ -5,6 +5,7 @@ from busy_beaver.simulation import simulate_machine
 
 
 class TestSimulation(unittest.TestCase):
+
     def test_simulate_halt(self):
         transition_dict = {
             ("A", 0): (1, "R", "H"),

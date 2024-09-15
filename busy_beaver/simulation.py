@@ -10,12 +10,15 @@ directions = ["L", "R"]
 # Global queue for progress updates
 progress_queue = asyncio.Queue()
 
+
 async def send_progress_update(progress):
     await progress_queue.put(progress)
 
-def simulate_machine(
-    transition_function, start_state="A", halt_states=["H"], max_steps=100000
-):
+
+def simulate_machine(transition_function,
+                     start_state="A",
+                     halt_states=["H"],
+                     max_steps=100000):
     tm = TuringMachine(
         transition_function=transition_function,
         start_state=start_state,
@@ -27,6 +30,7 @@ def simulate_machine(
         return (ones, steps, transition_function)
     else:
         return None  # Indicates non-halting machine
+
 
 async def worker_simulate(tf):
     # Build the transition dictionary
@@ -44,19 +48,22 @@ async def worker_simulate(tf):
     )
     return result  # Either (ones, steps, transition_dict) or None
 
+
 async def run_simulation(num_states, max_steps):
     global states, max_steps
-    states = [chr(65 + i) for i in range(num_states)]  # Generate states A, B, C, ...
+    states = [chr(65 + i)
+              for i in range(num_states)]  # Generate states A, B, C, ...
     max_steps = max_steps
 
     # Possible next states include all states plus the halt state
     all_states = states + ["H"]
 
     # Generate all possible transition actions
-    transition_actions = list(itertools.product(symbols, directions, all_states))
+    transition_actions = list(
+        itertools.product(symbols, directions, all_states))
 
     # Calculate the total number of machines
-    total_machines = len(transition_actions) ** (len(states) * len(symbols))
+    total_machines = len(transition_actions)**(len(states) * len(symbols))
 
     # Initialize tracking variables
     max_ones_found = 0
@@ -68,9 +75,9 @@ async def run_simulation(num_states, max_steps):
     machine_count = 0
 
     # Generate all possible transition functions
-    all_transition_functions = itertools.product(
-        transition_actions, repeat=len(states) * len(symbols)
-    )
+    all_transition_functions = itertools.product(transition_actions,
+                                                 repeat=len(states) *
+                                                 len(symbols))
 
     for tf in all_transition_functions:
         result = await worker_simulate(tf)
@@ -106,6 +113,7 @@ async def run_simulation(num_states, max_steps):
     }
 
     return results
+
 
 async def get_progress():
     while True:

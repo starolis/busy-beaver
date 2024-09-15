@@ -2,7 +2,12 @@
 
 
 class TuringMachine:
-    def __init__(self, transition_function, start_state, halt_states, max_steps=10000):
+
+    def __init__(self,
+                 transition_function,
+                 start_state,
+                 halt_states,
+                 max_steps=10000):
         self.transition_function = transition_function
         self.current_state = start_state
         self.halt_states = halt_states
@@ -14,9 +19,8 @@ class TuringMachine:
     def step(self):
         symbol = self.tape.get(self.head, 0)
         if (self.current_state, symbol) in self.transition_function:
-            write, move, next_state = self.transition_function[
-                (self.current_state, symbol)
-            ]
+            write, move, next_state = self.transition_function[(
+                self.current_state, symbol)]
             self.tape[self.head] = write
             if move == "R":
                 self.head += 1
