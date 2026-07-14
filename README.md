@@ -14,8 +14,9 @@ A Python-based simulator to explore Busy Beaver Turing machines. This project en
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/busy-beaver.git
+   git clone https://github.com/starolis/busy-beaver.git
    cd busy-beaver
+   ```
 
 2. **Create a Virtual Environment**
 
